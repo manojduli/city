@@ -1,0 +1,55 @@
+<br>
+<br>
+<div class = "wrapper">
+
+<table border = "5" align ="center" class="table table-hover">
+  <tr>
+  <th>
+    <h5><b>&nbsp;&nbsp;Game ID&nbsp;&nbsp;</b></h5>
+  </th>
+  <th>
+      <h5><b>&nbsp;&nbsp;Game Name&nbsp;&nbsp;</b></h5>
+    </th>
+    <th>
+        <h5><b>&nbsp;&nbsp;Game Price&nbsp;&nbsp;</b></h5>
+      </th>
+      <th>
+          <h5><b>&nbsp;Edit&nbsp;</b></h5>
+      </th>
+      <th>
+          <h5><b>&nbsp;Delete&nbsp;</b></h5>
+      </th>
+    </tr>
+<tr *ngFor = "let game of service.gamesList">
+  <td><h6>{{game.gameId}}</h6></td>
+  <td><h6>{{game.gameName}}</h6></td>
+  <td><h6>{{game.gamePrice}}</h6></td>
+  <td><button (click) = edit(game) class="btn btn-success">Edit</button></td>
+  <td><button (click) = delete(game) class="btn btn-danger">Delete</button></td>
+</tr>
+</table>
+<br><br>
+</div>
+
+<div *ngIf = "isUpdate" class= wrapper>
+  
+    <div class="form-group">
+        <label>Game ID: </label>
+      <input type = "text" size = "10" [(ngModel)] = "gameId" class = "form-control"/>
+    </div>
+    <div>
+        <label>Game Name: </label>
+        <input type = "text" [(ngModel)] = "gameName" class = "form-control"/>
+      </div>
+      <div>
+          <label>Game Price: </label>
+          <input type = "text" [(ngModel)] = "gamePrice" class = "form-control"/>
+        </div>
+        <br><br>
+      <div>
+      <button (click)="updateGameList(gameId)" class="btn btn-primary">Update Details</button>
+    </div>
+    <br><br>
+
+  </div>
+ 
