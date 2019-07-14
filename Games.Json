@@ -1,0 +1,27 @@
+[
+    {
+        "gameId":1,
+        "gameName":"PUBG",
+        "gamePrice":1000
+    },
+    {
+        "gameId":2,
+        "gameName":"Mini Militia",
+        "gamePrice":750
+    },
+    {
+        "gameId":3,
+        "gameName":"Asphalt 8",
+        "gamePrice":500
+    },
+    {
+        "gameId":4,
+        "gameName":"WWE 2K19",
+        "gamePrice":250
+    },
+    {
+        "gameId":5,
+        "gameName":"DBZ",
+        "gamePrice":125
+    }
+]
